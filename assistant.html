@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrimeIntel AI | AI Assistant</title>
+
+    <!-- Enterprise Design System Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assistance.css">
+
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-brand-group">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L3 6V12C3 17.52 6.84 22.74 12 24C17.16 22.74 21 17.52 21 12V6L12 2Z" fill="#990011" fill-opacity="0.2" stroke="#990011" stroke-width="2" stroke-linejoin="round"/>
+                        <circle cx="12" cy="11" r="2.5" fill="#990011"/>
+                        <path d="M12 7V11M12 11L15 13.5M12 11L9 13.5" stroke="#990011" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <span class="brand-name">CrimeIntel <span class="accent-text">AI</span></span>
+            </a>
+
+        </div>
+
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="analytics.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+                <li><a href="assistant.html" class="nav-link active"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="login.html" class="btn btn-outline-sm"><i class="fa-solid fa-lock"></i><span>Login</span></a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Page Title Header -->
+        <section class="hero-section" style="padding: var(--space-6) 0 var(--space-4); text-align: center;">
+            <h1 class="hero-title" style="font-size: 2.2rem;">AI Crime Intelligence Assistant</h1>
+            <p class="hero-subtitle" style="margin-bottom: 0;">Ask queries about incident logs, Modus Operandi profiling, and spatio-temporal risk forecasts.</p>
+        </section>
+
+        <!-- Clean Pure Chat Container -->
+        <div class="simple-chat-container">
+            <div class="chat-card">
+                <!-- Header Toolbar -->
+                <div class="chat-card-header">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div class="op-icon" style="width: 36px; height: 36px; font-size: 1rem;"><i class="fa-solid fa-robot"></i></div>
+                        <div>
+                            <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-heading);">Tactical Intelligence Agent</h3>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">VectorDB Connected • CrimeLLM-v2.6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages Stream (Starts Empty, No Default Greeting or Answer) -->
+                <div class="chat-card-body" id="chatBody"></div>
+
+                <!-- Input Controls Bar -->
+                <div class="chat-input-bar">
+                    <input type="text" id="chatInput" class="chat-input-field" placeholder="Ask about crime patterns, Modus Operandi, or hotspot forecasts..." onkeydown="handleKeyPress(event)">
+                    <button class="btn btn-primary" onclick="sendMessage()">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Send</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Production Large Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col">
+                    <div class="brand" style="color: #FFFFFF; margin-bottom: 12px;">
+                        <div class="brand-icon" style="background: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.3); color: #FFFFFF;">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <span class="brand-name">CrimeIntel <span style="color: #FFD1D6;">AI</span></span>
+                    </div>
+                    <p class="footer-brand-desc">
+                        Enterprise AI platform for law enforcement. Real-time incident analytics, spatial risk forecasts, and tactical intelligence operations.
+                    </p>
+                    <div class="footer-security-pill">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>AES-256 Encrypted Protocol</span>
+                    </div>
+                </div>
+
+                <!-- Platform Column -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Platform</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="index.html">Command Dashboard</a></li>
+                        <li><a href="analytics.html">Analytics & Spatial GIS</a></li>
+                        <li><a href="assistant.html">AI Crime Assistant</a></li>
+                        <li><a href="login.html">Officer Login Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI Crime Intelligence Platform. Built for Law Enforcement Command Operations.</p>
+                <div class="footer-bottom-links">
+                    <span>Node ID: KA-04-PROD</span>
+                    <span class="divider">•</span>
+                    <span>System Normal</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script src="script.js"></script>
+    <script src="assistance.js"></script>
+</body>
+</html> 
