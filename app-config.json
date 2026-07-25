@@ -1,5 +1,5 @@
 {
-	"command": "echo Please specify the start-up command in the app-config.json file under the key command for AppSail $X_ZC_RESOURCE_NAME",
+	"command": "uvicorn backend.main:app --host 0.0.0.0 --port $X_ZOHO_CATALYST_LISTEN_PORT",
 	"build_path": "./",
 	"stack": "python_3_11",
 	"env_variables": {},
