@@ -20,8 +20,18 @@ export default function LoginPage() {
       await login(username, password)
       navigate('/chat')
     } catch (err) {
+  if (err.response) {
+    if (err.response.status === 401) {
       setError('Invalid username or password. Please try again.')
-    } finally {
+    } else {
+      setError(`Server Error (${err.response.status}): ${err.response.data?.detail || 'Please try again later.'}`)
+    }
+  } else if (err.request) {
+    setError('Network Error: Unable to connect to the backend server. Please verify if the server is running.')
+  } else {
+    setError(err.message || 'An unexpected error occurred.')
+  }
+} finally {
       setLoading(false)
     }
   }
